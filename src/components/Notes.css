@@ -1,0 +1,27 @@
+.note-card:hover {
+	transform: scale(1.05);
+	box-shadow: 0px 25px 50px -12px rgba(16, 24, 40, 0.25);
+}
+
+.card-actions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.note-form {
+	font-style: italic;
+	color: gray;
+}
+
+.card-info {
+	min-height: 210px;
+}
+
+.card-note-header {
+	background-color: #06283d !important;
+}
+
+.note-date {
+	color: #fff;
+}

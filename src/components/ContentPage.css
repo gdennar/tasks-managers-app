@@ -1,0 +1,140 @@
+.main-content {
+	width: 100vw;
+	height: calc(100vh - 2rem);
+	/* position: relative;
+	top: 80px; */
+
+	background-color: rgba(193, 208, 219, 0.288);
+	padding-top: 90px;
+	overflow-y: scroll;
+}
+
+.wrapper {
+	height: calc(100vh - 15rem);
+}
+
+.main-content .url-path {
+	background-color: #fff;
+	padding: 10px;
+	box-shadow: 0px 25px 50px -12px rgba(16, 24, 40, 0.25);
+	border-radius: 5px;
+	font-size: 24px;
+	color: #06283d;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.main-content::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.main-content {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+/* .content-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	top: 20px;
+	padding: 0 25px;
+} */
+
+.add-task-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.task-content {
+	animation: task-appear 1s ease-out forwards;
+}
+
+@keyframes task-appear {
+	from {
+		opacity: 0;
+		transform: translateY(3rem);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.main-content .dashboard-paper {
+	height: 120px;
+	padding: 15px;
+}
+
+.main-content .dashboard-items {
+	display: flex;
+	justify-content: space-between;
+	height: 70%;
+	color: #4c4c4c;
+	font-size: 1.2rem;
+}
+
+.main-content .dashboard-item {
+	font-size: 2rem;
+	color: #ff7000;
+}
+
+.main-content .dashboard-item.one {
+	font-size: 2rem;
+	color: #540375;
+}
+
+.main-content .dashboard-item.two {
+	font-size: 2rem;
+	color: #379237;
+}
+
+.main-content .dashboard-item.three {
+	font-size: 2rem;
+	color: #00abb3;
+}
+
+.profile-container {
+	position: relative;
+}
+
+.profile-button {
+	position: absolute !important;
+	top: 50px !important;
+	z-index: 9999;
+}
+
+.profile-button:hover {
+	z-index: 9999;
+}
+
+.name-icon {
+	background-color: #fa221e;
+	color: #fff;
+	width: 35px;
+	height: 35px;
+	font-size: 1.2rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	padding: 10px;
+}
+
+@media screen and (max-width: 725px) {
+	.main-content {
+		width: 100vw;
+		position: relative;
+		top: 80px;
+		left: 0;
+	}
+
+	.name-icon {
+		width: 20px;
+		height: 20px;
+		font-size: 1rem;
+	}
+}

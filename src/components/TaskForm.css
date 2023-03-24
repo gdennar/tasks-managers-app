@@ -1,0 +1,36 @@
+.task-form-card {
+	padding: 20px;
+}
+
+.task-btns {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.task-input label {
+	font-size: 1.2rem;
+	font-weight: 500;
+	margin-bottom: 0.25rem;
+	display: block;
+	color: #06283d;
+}
+
+.task-input input,
+.task-input textarea,
+.task-input select {
+	font: inherit;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	width: 40rem;
+	padding: 7px;
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+.task-input input:focus,
+.task-input textarea:focus,
+.task-input select {
+	border: 1px solid #06283d;
+	outline: none;
+}
