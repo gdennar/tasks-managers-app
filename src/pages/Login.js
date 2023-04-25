@@ -13,10 +13,8 @@ const Login = () => {
 
 	const navigate = useNavigate();
 
-	const { currentUser, isLoggedIn, login, isError, setIsError } =
-		useContext(AuthContext);
+	const { currentUser, login, isError, setIsError } = useContext(AuthContext);
 
-	console.log(isLoggedIn);
 	const loginHandler = async (e) => {
 		e.preventDefault();
 		setIsLoading(true);
@@ -28,6 +26,8 @@ const Login = () => {
 		if (currentUser) {
 			setIsLoading(false);
 			navigate("/dashboard");
+		} else {
+			setIsLoading(false);
 		}
 	};
 

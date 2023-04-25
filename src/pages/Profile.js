@@ -1,7 +1,6 @@
 import React, { useRef, useState, useContext } from "react";
 import { useResolvedPath } from "react-router-dom";
 import { Alert, Button, Card } from "@mui/material";
-import Input from "../UI/Input";
 import { Link, useNavigate } from "react-router-dom";
 import "../components/AuthForm.css";
 import AuthContext from "../store/auth-context";
@@ -10,8 +9,6 @@ import TextField from "@mui/material/TextField";
 
 const Profile = () => {
 	const [isLoading, setIsLoading] = useState(false);
-	const [message, setMessage] = useState(false);
-	const nameRef = useRef();
 	const emailRef = useRef();
 	const passwordRef = useRef();
 	const confirmPasswordRef = useRef();

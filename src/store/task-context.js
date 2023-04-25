@@ -32,16 +32,6 @@ export const TaskContextProvider = ({ children }) => {
 
 	const taskCollectionRef = collection(db, "tasks");
 
-	const filteredPendingTask = countPending.filter(
-		(task) => task.uid === currentUser.uid
-	);
-	const filteredProgressTask = countProgress.filter(
-		(task) => task.uid === currentUser.uid
-	);
-	const filteredCompletedTask = countCompleted.filter(
-		(task) => task.uid === currentUser.uid
-	);
-
 	const completed = query(
 		taskCollectionRef,
 		where("status", "==", "completed")
@@ -81,25 +71,36 @@ export const TaskContextProvider = ({ children }) => {
 		const onSnapdoc = await getDocs(completed);
 		const docs = onSnapdoc.docs;
 		setCountCompleted(docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-		return onSnapdoc;
+		// return onSnapdoc;
 	};
 	const getPendingTaskHandler = async () => {
 		const onSnapdoc = await getDocs(pending);
 		const docs = onSnapdoc.docs;
 		setCountPending(docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-		return onSnapdoc;
+		// return onSnapdoc;
 	};
 	const getInProgressTaskHandler = async () => {
 		const onSnapdoc = await getDocs(inProgress);
 		const docs = onSnapdoc.docs;
 		setCountProgress(docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-		return onSnapdoc;
+		// return onSnapdoc;
 	};
 
 	const editTaskHandler = (id) => {
 		const taskDoc = doc(db, "tasks", id);
 		return getDoc(taskDoc);
 	};
+
+	const filteredPendingTask = countPending.filter(
+		(task) => task.uid === currentUser.uid
+	);
+	const filteredProgressTask = countProgress.filter(
+		(task) => task.uid === currentUser.uid
+	);
+	const filteredCompletedTask = countCompleted.filter(
+		(task) => task.uid === currentUser.uid
+	);
+
 	const contextValue = {
 		addTask: addTaskHandler,
 		updateTask: updateTaskHandler,

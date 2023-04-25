@@ -78,4 +78,11 @@
 	color: #06283d;
 	font-size: 2rem;
 	padding-bottom: 1rem;
+	width: 100%;
 }
+
+/* @media screen and (max-width: 425px) {
+	.form-container {
+		margin: 3rem auto;
+	}
+} */

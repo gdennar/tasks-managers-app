@@ -77,3 +77,8 @@
 		margin-right: 0px;
 	}
 }
+@media screen and (max-width: 425px) {
+	.header-logout {
+		height: 3rem;
+	}
+}
