@@ -81,8 +81,16 @@
 	width: 100%;
 }
 
-/* @media screen and (max-width: 425px) {
+@media screen and (max-width: 425px) {
 	.form-container {
-		margin: 3rem auto;
+		margin: auto;
+		width: 250px;
 	}
-} */
+
+	/* .auth-text {
+		display: none;
+	}
+	.auth-text span {
+		display: block;
+	} */
+}
