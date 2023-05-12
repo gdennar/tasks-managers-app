@@ -98,7 +98,7 @@ function App() {
 					/>
 				</Routes>
 			</main>
-			{!isLoggedIn && <Footer />}
+			<Footer />
 		</>
 	);
 }

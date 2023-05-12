@@ -81,16 +81,16 @@
 	width: 100%;
 }
 
+@media screen and (max-width: 725px) {
+	.form-container {
+		margin: auto;
+		width: 425px !important;
+	}
+}
+
 @media screen and (max-width: 425px) {
 	.form-container {
 		margin: auto;
-		width: 250px;
+		width: 325px !important;
 	}
-
-	/* .auth-text {
-		display: none;
-	}
-	.auth-text span {
-		display: block;
-	} */
 }
